@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Foundry Athletic Club | Cinematic strength and conditioning</title>
+<meta name="description" content="Foundry Athletic Club is a capped-membership strength and conditioning gym in Denver's RiNo district. Start your free first week.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..900&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0E0F10;--plate:#1A1C1E;--steel:#3A3F44;--concrete:#A7A59E;--chalk:#EDEDE8;--heat1:#FF7A1A;--heat2:#FF3D00;--ink:#151617;--display:'Archivo',sans-serif;--body:'Schibsted Grotesk',sans-serif;--cut:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--chalk);font-family:var(--body);font-size:16px;line-height:1.55;overflow-x:hidden}button,input,select{font:inherit}a{color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.num{font-variant-numeric:tabular-nums}h1,h2,h3{font-family:var(--display);font-stretch:120%;line-height:.96;margin:0;letter-spacing:-.035em}h2{font-size:clamp(2.5rem,6vw,5.2rem);text-transform:uppercase}h3{font-size:clamp(1.4rem,2.5vw,2rem)}p{margin:0}button,a,input,select{outline-offset:4px}:focus-visible{outline:3px solid var(--chalk)}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 22px;border:1px solid #777;background:transparent;color:var(--chalk);text-decoration:none;font-weight:700;clip-path:var(--cut);cursor:pointer}.primary{background:linear-gradient(90deg,var(--heat1),var(--heat2));border:0;color:#090909}.section{padding:clamp(72px,10vw,130px) 0}.noise{position:relative}.noise:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}.platebox{background:var(--plate);border-top:1px solid rgba(255,255,255,.08);clip-path:var(--cut)}
+/* nav */
+.nav{position:fixed;z-index:100;top:0;left:0;right:0;transition:.2s;background:linear-gradient(#0e0f10cc,transparent)}.nav.solid{background:var(--black);border-bottom:1px solid #2c2e30}.navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.brand svg{width:38px}.brand strong{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:1.25rem}.brand small{color:var(--concrete);font-size:.75rem}.links{display:flex;align-items:center;gap:24px}.links a{text-decoration:none;font-weight:600}.menu{display:none;background:none;color:var(--chalk);border:1px solid #777;min-width:48px;min-height:48px}.mobile{display:none;position:fixed;inset:0;background:var(--black);z-index:110;padding:28px}.mobile.open{display:flex;flex-direction:column}.mobile .close{align-self:flex-end}.mobile nav{display:grid;gap:18px;margin:auto 0}.mobile nav a{font-family:var(--display);font-size:clamp(2rem,12vw,4rem);font-weight:900;text-decoration:none}
+/* hero */
+.hero{height:500vh;background:var(--black);position:relative}.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:radial-gradient(circle at 22% 12%,#3a3f4440 0,transparent 35%),var(--black)}.stage.shake{animation:shake .12s linear}@keyframes shake{33%{transform:translateX(2px)}66%{transform:translateX(-2px)}}.hero-photo{position:absolute;inset:0;opacity:.12!important;clip-path:none!important}.hero-photo:before{opacity:.22}.skip{position:absolute;z-index:5;top:94px;right:20px}.hero-copy{position:absolute;z-index:5;left:max(20px,calc((100vw - 1180px)/2));top:19%;width:min(560px,70vw)}.counter{font-family:var(--display);font-weight:900;font-stretch:125%;font-size:clamp(4rem,12vw,10rem);line-height:.8;background:linear-gradient(90deg,var(--heat1),var(--heat2));-webkit-background-clip:text;color:transparent;font-variant-numeric:tabular-nums}.hero-copy h1{font-size:clamp(2.2rem,5vw,4.7rem);text-transform:uppercase;margin:30px 0 14px}.hero-copy p{font-size:clamp(1rem,2vw,1.3rem);color:#c5c6c1;max-width:42ch}.hero-actions{display:flex;gap:18px;align-items:center;margin-top:28px;opacity:0;pointer-events:none;transition:.25s}.hero-actions.show{opacity:1;pointer-events:auto}.barwrap{position:absolute;z-index:3;left:0;right:0;top:57%;height:250px;transform:translateY(-50%);transition:transform .35s}.barwrap.lock{transform:translateY(calc(-50% - 24px));animation:lock .45s ease-out}@keyframes lock{50%{transform:translateY(calc(-50% - 30px)) scaleY(1.02)}}#barSvg{width:100%;height:100%;overflow:visible}.plate{opacity:0;transition:transform .45s ease-out,opacity .15s}.plate.left{transform:translateX(-100vw)}.plate.right{transform:translateX(100vw)}.plate.on{opacity:1;transform:none}.floor{position:absolute;left:5%;right:5%;top:calc(57% + 104px);height:1px;background:#7776;box-shadow:0 0 70px 18px #c7c7c710}.barGlow{position:absolute;width:60vw;height:30vh;left:50%;top:58%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,#ff5b0018,transparent 67%);transition:opacity .3s}.stage[data-level="4"] .barGlow{opacity:1}.hero-foot{position:absolute;bottom:28px;left:max(20px,calc((100vw - 1180px)/2));color:#888}
+/* photo slots */
+.photo{position:relative;overflow:hidden;min-height:260px;clip-path:var(--cut);background:linear-gradient(135deg,#44494d,#17191b 65%);border-top:1px solid #ffffff14}.photo:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 28%,#ff7a1a1f,transparent 24%),repeating-linear-gradient(100deg,transparent 0 50px,#ffffff05 51px 52px)}.photo:after{content:"";position:absolute;width:110px;height:110px;border:16px solid #ffffff0d;border-radius:50%;right:9%;bottom:12%;box-shadow:inset 0 0 0 18px #ffffff08}.photo i{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.08'/%3E%3C/svg%3E")}
+/* capacity */
+.capacity{background:var(--plate);border-block:1px solid #ffffff15;padding:30px 0}.capgrid{display:grid;grid-template-columns:1.3fr 1fr auto;gap:30px;align-items:center}.capbig{font-family:var(--display);font-weight:900;font-size:clamp(1.6rem,3vw,2.7rem)}.meter{height:14px;background:#333}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--heat1),var(--heat2));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}.meter.go span{width:91.55%}
+/* programs */
+.programs{background:var(--plate)}.sectionhead{display:grid;grid-template-columns:1fr .8fr;gap:50px;align-items:end;margin-bottom:52px}.sectionhead p{color:#b7b8b4;max-width:50ch}.programgrid{display:grid;grid-template-columns:1.25fr .85fr .85fr;gap:18px;align-items:start}.program{padding-bottom:25px}.program:first-child{grid-row:span 2}.program:first-child .photo{min-height:520px}.program h3{margin:20px 0 10px;text-transform:uppercase}.program p{color:#bbb;margin-bottom:18px}.program ul{padding-left:18px;color:#ddd}
+/* schedule */
+.schedule{background:var(--chalk);color:var(--ink)}.tabs,.filters{display:flex;gap:8px;overflow:auto;padding-bottom:5px}.tabs{margin:35px 0 14px}.tab,.chip{min-height:44px;padding:0 16px;border:1px solid #686868;background:transparent;cursor:pointer;white-space:nowrap}.tab[aria-selected="true"],.chip.active{background:linear-gradient(90deg,var(--heat1),var(--heat2));color:#090909;border-color:transparent}.filters{margin-bottom:32px}.classrow{display:grid;grid-template-columns:110px 1.5fr .8fr 90px 130px 160px 130px;gap:14px;align-items:center;padding:19px 0;border-top:1px solid #aaa}.classrow:last-child{border-bottom:1px solid #aaa}.classrow strong{font-family:var(--display)}.spots{display:flex;gap:3px}.spots i{width:7px;height:22px;background:#bbb}.spots i.full{background:#242526}.classrow button{min-height:44px;border:1px solid #333;background:#fff;font-weight:700;cursor:pointer}.classrow button:disabled{opacity:.5;cursor:not-allowed}
+/* lab */
+.lab{background:var(--black)}.labgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.seg{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}.seg button{min-height:44px;background:var(--plate);color:var(--chalk);border:1px solid #555;padding:0 15px}.seg button.active{background:linear-gradient(90deg,var(--heat1),var(--heat2));color:#111;border:0}.field{margin:22px 0}.field label{display:block;font-weight:700;margin-bottom:8px}.stepper{display:flex}.stepper button,.stepper input{height:52px;background:var(--plate);color:var(--chalk);border:1px solid #555}.stepper button{width:52px}.stepper input{width:130px;text-align:center}.field input[type=range]{width:100%}.rm{font-family:var(--display);font-weight:900;font-size:clamp(5rem,11vw,9rem);line-height:.9}.train{width:100%;border-collapse:collapse;margin-top:28px}.train td,.train th{padding:14px;border-bottom:1px solid #444;text-align:left}.train tr{cursor:pointer}.train tbody tr:hover,.train tbody tr.sel{background:#232527}.loadout{margin-top:24px;padding:20px;background:var(--plate);clip-path:var(--cut)}#miniBar{width:100%;height:110px}
+/* membership */
+.membership{background:#111}.billing{display:flex;gap:6px;margin:30px 0 45px}.billing button{min-height:46px;padding:0 20px;background:var(--plate);color:var(--chalk);border:1px solid #555}.billing button.active{background:linear-gradient(90deg,var(--heat1),var(--heat2));color:#111;border:0}.plans{display:grid;grid-template-columns:.85fr 1.15fr .95fr;gap:18px;align-items:center}.plan{padding:34px 28px;min-height:430px}.plan.feature{min-height:500px;border-right:4px solid var(--heat2)}.plan .price{font-family:var(--display);font-size:4rem;font-weight:900;margin:18px 0}.plan ul{padding-left:20px;min-height:180px}.plan .btn{margin-top:20px}
+/* coaches */
+.coaches{background:var(--plate)}.coachgrid{display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:18px}.coach{background:#121314;padding-bottom:22px}.coach:first-child{grid-row:span 2}.coach:first-child .photo{min-height:560px}.coach .photo{min-height:250px}.coachbody{padding:22px}.coach h3{text-transform:uppercase}.role{color:#aaa;margin:5px 0 12px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:15px 0}.chips span{border:1px solid #555;padding:5px 9px;font-size:.85rem}.bioextra{display:none;color:#bbb;margin-top:12px}.bioextra.open{display:block}.more{min-height:44px;background:none;border:0;color:var(--chalk);text-decoration:underline;cursor:pointer;padding:0}
+/* facility */
+.facility{background:var(--concrete);color:var(--ink)}.facilitygrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}.specs{columns:2;padding-left:20px}.specs li{margin-bottom:12px;break-inside:avoid}.floorplan{background:#85847e;padding:20px;clip-path:var(--cut)}.floorplan svg{width:100%;height:auto}.hot{cursor:pointer}.hot rect,.hot path{fill:#d5d4cd;stroke:#222;stroke-width:2}.hot:focus rect,.hot:hover rect,.hot.active rect{fill:#f0eee8;stroke-width:4}.panel{margin-top:16px;padding:20px;background:#d8d6ce;min-height:92px}.facilityphotos{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:12px;margin-top:45px}.facilityphotos .photo{min-height:220px}
+/* notes faq join */
+.notes{background:var(--black)}.quotes{display:grid;grid-template-columns:1.3fr .7fr;gap:50px}.quote{padding:34px 0;border-top:1px solid #555}.quote:first-child{grid-row:span 2}.quote blockquote{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4vw,4rem);line-height:1.02;margin:0 0 20px}.quote:not(:first-child) blockquote{font-size:clamp(1.6rem,2.8vw,2.5rem)}.faq{background:var(--plate)}.faqitem{border-top:1px solid #555}.faqitem:last-child{border-bottom:1px solid #555}.faqitem button{width:100%;min-height:72px;background:none;border:0;color:var(--chalk);display:flex;justify-content:space-between;text-align:left;font-family:var(--display);font-weight:800;font-size:1.2rem}.faqans{display:none;color:#bbb;max-width:70ch;padding:0 0 24px}.faqans.open{display:block}.join{background:var(--chalk);color:var(--ink)}.joingrid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:35px}.formgrid label{display:block;font-weight:700}.formgrid input,.formgrid select{width:100%;height:52px;border:1px solid #555;background:#fff;padding:0 12px;margin-top:6px}.formgrid .full{grid-column:1/-1}.error{color:#9c2100;font-size:.85rem;min-height:20px}.hours{width:100%;border-collapse:collapse;margin:25px 0}.hours td{padding:10px;border-bottom:1px solid #aaa}.hours tr.today{font-weight:800;background:#d9d8d1}.status{display:inline-block;padding:8px 12px;background:#222;color:#fff;font-weight:700}.success{padding:20px;background:#d7ded1;font-weight:700;margin-top:18px}.footer{padding:50px 0;background:var(--black);border-top:1px solid #333}.footgrid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.demo{color:#777;margin-top:30px;font-size:.9rem}
+/* dialog */dialog{width:min(560px,calc(100% - 30px));background:var(--chalk);color:var(--ink);border:0;padding:28px;clip-path:var(--cut)}dialog::backdrop{background:#000b}.dlghead{display:flex;justify-content:space-between;gap:20px}.dlghead button{width:44px;height:44px}.dlgform label{display:block;margin:16px 0}.dlgform input{width:100%;height:48px;margin-top:5px;padding:0 10px}.dlgform .primary{width:100%}
+@media(max-width:900px){.links{display:none}.menu{display:block}.sectionhead,.labgrid,.facilitygrid,.joingrid{grid-template-columns:1fr}.programgrid{grid-template-columns:1fr 1fr}.program:first-child{grid-column:1/-1;grid-row:auto}.program:first-child .photo{min-height:380px}.classrow{grid-template-columns:90px 1.2fr .8fr 100px}.classrow>*:nth-child(4),.classrow>*:nth-child(5){display:none}.plans{grid-template-columns:1fr}.plan,.plan.feature{min-height:0}.plan ul{min-height:0}.coachgrid{grid-template-columns:1fr 1fr}.coach:first-child{grid-column:1/-1;grid-row:auto}.coach:first-child .photo{min-height:420px}.capgrid{grid-template-columns:1fr}.hero-copy{top:14%}.barwrap{top:65%}.floor{top:calc(65% + 104px)}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1180px)}.section{padding:70px 0}.hero-copy{width:calc(100% - 40px);top:15%}.counter{font-size:4.4rem}.hero-copy h1{font-size:2.25rem;margin-top:20px}.hero-actions{gap:10px;flex-wrap:wrap}.barwrap{top:67%;height:190px}.floor{top:calc(67% + 80px)}.programgrid,.coachgrid,.facilityphotos,.formgrid{display:flex;overflow:auto;scroll-snap-type:x mandatory}.program,.coach,.facilityphotos .photo,.formgrid>*{min-width:86vw;scroll-snap-align:start}.program:first-child,.coach:first-child{min-width:86vw}.program:first-child .photo,.coach:first-child .photo{min-height:280px}.classrow{grid-template-columns:74px 1fr 100px}.classrow>*:nth-child(3),.classrow>*:nth-child(6){display:none}.quotes{grid-template-columns:1fr}.specs{columns:1}.joingrid{gap:40px}.formgrid{display:grid;grid-template-columns:1fr;overflow:visible}.formgrid>*{min-width:0}.formgrid .full{grid-column:auto}.rm{font-size:5rem}.navin{height:68px}.brand small{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero{height:auto}.stage{position:relative;height:820px}.plate{transition:none!important}.hero-actions{opacity:1;pointer-events:auto}.barwrap{transform:translateY(calc(-50% - 24px))}.meter span{transition:none}*{animation:none!important}}
+</style>
+
+<style id="cinematic-upgrade">
+:root{
+  --black:#0b0c0d;
+  --ink:#0f1011;
+  --plate:#151719;
+  --plate-2:#1c1f22;
+  --steel:#49515a;
+  --concrete:#b8b1a6;
+  --chalk:#f1efe8;
+  --smoke:#d7d0c8;
+  --heat1:#ff8b2b;
+  --heat2:#ff5b16;
+  --line:rgba(255,255,255,.10);
+  --panel:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  --cut:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);
+}
+html{background:#0b0c0d}
+body{
+  background:
+    radial-gradient(circle at top left, rgba(255,120,35,.12), transparent 28%),
+    radial-gradient(circle at 80% 8%, rgba(255,255,255,.03), transparent 22%),
+    linear-gradient(180deg,#111214 0%, #0b0c0d 32%, #111214 100%);
+  color:var(--chalk);
+}
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.015) 0 1px, transparent 1px 100%),
+    linear-gradient(0deg, rgba(255,255,255,.012) 0 1px, transparent 1px 100%),
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.03), transparent 50%);
+  background-size: 80px 80px, 80px 80px, auto;
+  opacity:.35;
+  mix-blend-mode:soft-light;
+}
+body > *{position:relative; z-index:1}
+.wrap{width:min(1220px,calc(100% - 40px))}
+.noise:after{opacity:.07; mix-blend-mode:overlay}
+h1,h2,h3{letter-spacing:-.045em}
+h2{text-shadow:0 6px 24px rgba(0,0,0,.25)}
+p, li, small, td, th{color:#d2ccc2}
+.section{padding:clamp(78px,9vw,132px) 0}
+.sectionhead{margin-bottom:56px}
+.sectionhead p{max-width:58ch}
+
+/* Surfaces */
+.platebox,
+.program,
+.plan,
+.coach,
+.panel,
+.quote,
+#visit,
+.loadout,
+.capacity,
+.footer,
+dialog,
+.classrow,
+.plan,
+.facilityphotos .photo,
+.floorplan,
+.notes .quote,
+.faqitem,
+.status{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015)),
+    linear-gradient(135deg, rgba(255,255,255,.03), rgba(0,0,0,.1)),
+    #121416;
+  border:1px solid rgba(255,255,255,.08) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    inset 0 -1px 0 rgba(0,0,0,.35),
+    0 24px 55px rgba(0,0,0,.28);
+}
+.programs,.membership,.lab,.coaches,.faq,.join{background:transparent !important}
+.capacity{padding:24px 0;border:none !important;margin:0 20px;clip-path:var(--cut)}
+.capgrid{width:min(1180px,calc(100% - 40px));margin:auto}
+.capbig{font-size:clamp(1.6rem,3vw,2.55rem)}
+.meter{height:14px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+.meter span{border-radius:999px;box-shadow:0 0 28px rgba(255,108,24,.35)}
+
+/* Nav */
+.nav{
+  background:linear-gradient(180deg, rgba(8,9,10,.84), rgba(8,9,10,.32)) !important;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid transparent;
+}
+.nav.solid{background:rgba(10,11,12,.94)!important;border-bottom-color:rgba(255,255,255,.08)!important}
+.navin{height:82px}
+.brand strong{font-size:1.3rem}
+.brand small{color:#c5b9aa}
+.links a{opacity:.92}
+.links a:hover{opacity:1;color:#fff}
+
+/* Buttons */
+.btn,
+.tab,
+.chip,
+.billing button,
+.seg button,
+.classrow button,
+.more,
+.menu,
+#dlgClose,
+.mobile .close{
+  border:1px solid rgba(255,255,255,.16)!important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.015) 28%, rgba(0,0,0,.28)),
+    linear-gradient(180deg, #3e454d, #1a1d20 58%, #121416);
+  color:var(--chalk)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -12px 24px rgba(0,0,0,.26),
+    0 10px 26px rgba(0,0,0,.24);
+  border-radius:14px;
+  clip-path:none!important;
+  text-decoration:none!important;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+.btn:hover,
+.tab:hover,
+.chip:hover,
+.billing button:hover,
+.seg button:hover,
+.classrow button:hover,
+.more:hover,
+.menu:hover,
+#dlgClose:hover{transform:translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -12px 24px rgba(0,0,0,.26), 0 16px 32px rgba(0,0,0,.32)}
+.btn.primary,
+.tab[aria-selected="true"],
+.chip.active,
+.seg button.active,
+.billing button.active,
+.plan.feature .planbtn,
+.classrow button:not(:disabled):hover,
+.classrow button:focus-visible{
+  color:#100e0b!important;
+  border-color:rgba(255,255,255,.18)!important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.32), rgba(255,255,255,.06) 18%, rgba(0,0,0,.08) 100%),
+    linear-gradient(135deg,var(--heat1),var(--heat2));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.34),
+    0 18px 40px rgba(255,93,22,.26),
+    0 0 0 1px rgba(255,150,96,.06);
+}
+.hero-actions a:not(.btn){
+  display:inline-flex;align-items:center;gap:10px;
+  min-height:52px;padding:0 18px;border-radius:14px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  text-decoration:none;color:#fff;backdrop-filter:blur(10px)
+}
+.hero-actions a:not(.btn)::after{content:"→";opacity:.75}
+
+/* Hero */
+.hero{height:360vh;background:transparent}
+.stage{
+  background:#0d0f10;
+  box-shadow:inset 0 -120px 120px rgba(0,0,0,.55);
+}
+.hero-photo,.hero-photo:before,.hero-photo:after{clip-path:none!important;border:none!important;box-shadow:none!important}
+.hero-photo{
+  opacity:1!important;
+  background:
+    linear-gradient(90deg, rgba(10,11,12,.92) 0%, rgba(10,11,12,.82) 34%, rgba(10,11,12,.48) 58%, rgba(10,11,12,.66) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.50)),
+    url('./assets/hero-bench.png') center center / cover no-repeat !important;
+  transform:scale(1.02);
+}
+.hero-photo i,.photo i{display:none!important}
+.skip{
+  top:104px;right:26px;color:#fff;text-decoration:none;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  padding:12px 16px;border-radius:999px;backdrop-filter:blur(10px)
+}
+.hero-copy{top:15%;width:min(600px,78vw)}
+.counter{
+  font-size:clamp(4.6rem,11vw,9.2rem);
+  text-shadow:0 14px 40px rgba(255,93,22,.20);
+}
+.hero-copy h1{font-size:clamp(2.5rem,5.1vw,5.25rem);margin:22px 0 18px;text-shadow:0 14px 44px rgba(0,0,0,.44)}
+.hero-copy p{font-size:clamp(1.05rem,1.8vw,1.24rem);max-width:44ch;color:#ece6dc}
+.hero-actions{margin-top:34px;gap:14px}
+.hero-foot{
+  bottom:24px;
+  display:inline-flex;gap:14px;align-items:center;flex-wrap:wrap;
+  padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);
+  color:#f0e8dd
+}
+.barwrap,.floor,.barGlow{display:none!important}
+
+/* Photo figures */
+.photo{
+  min-height:300px;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08)!important;
+  background-color:#1a1c1e!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  clip-path:none!important;
+  box-shadow:0 30px 70px rgba(0,0,0,.32), inset 0 0 0 1px rgba(255,255,255,.04)!important;
+}
+.photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,8,9,.08), rgba(7,8,9,.16) 50%, rgba(7,8,9,.48));z-index:1}
+.photo:after{display:none!important}
+.hero-photo:before{display:none!important}
+.program:first-child .photo{min-height:560px}
+.facilityphotos .photo{min-height:280px}
+.coach .photo{min-height:420px;background-position:center top!important}
+.photo[data-photo="program-strength"]{background-image:url('./assets/program-strength.png')}
+.photo[data-photo="program-conditioning"]{background-image:url('./assets/program-conditioning.png')}
+.photo[data-photo="program-recovery"]{background-image:url('./assets/program-recovery.png')}
+.photo[data-photo="facility-racks"]{background-image:url('./assets/facility-racks.png')}
+.photo[data-photo="facility-sled"]{background-image:url('./assets/facility-sled.png')}
+.photo[data-photo="facility-recovery"]{background-image:url('./assets/facility-recovery.png')}
+.photo[data-photo="coach-marcus"]{background-image:url('./assets/coach-marcus.png')}
+.photo[data-photo="coach-tessa"]{background-image:url('./assets/coach-tessa.png')}
+.photo[data-photo="coach-jonah"]{background-image:url('./assets/coach-jonah.png')}
+.photo[data-photo="coach-priya"]{background-image:url('./assets/coach-priya.png')}
+
+/* Grids/cards */
+.programgrid,.plans,.coachgrid,.facilityphotos,.quotes{gap:22px!important}
+.program,.plan,.coach,.quote,.faqitem,.panel,#visit{
+  border-radius:22px;
+  padding:22px;
+}
+.program{background:transparent!important;border:none!important;box-shadow:none!important;padding:0}
+.program h3,.plan h3,.coach h3{margin-top:20px;text-transform:uppercase}
+.program ul,.plan ul{padding-left:18px}
+.program ul li,.plan ul li{margin:9px 0}
+.plan{padding:26px}
+.plan.feature{
+  transform:translateY(-8px);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+    linear-gradient(180deg, rgba(255,104,34,.08), transparent 42%),
+    #151719 !important;
+}
+.plan strong{
+  display:inline-block;margin-bottom:14px;padding:8px 12px;border-radius:999px;
+  background:rgba(255,115,32,.14);color:#ffd4bd;border:1px solid rgba(255,151,91,.18)
+}
+.price{font-family:var(--display);font-size:clamp(2.6rem,4vw,4rem);line-height:.9;margin:14px 0 16px;color:#fff}
+.price small{font-size:.34em;color:#e8ded1}
+
+/* Schedule */
+.schedule{
+  background:linear-gradient(180deg,#dfd7cb,#cfc5b7)!important;
+  color:#151617!important;
+  border-top:1px solid rgba(0,0,0,.08);
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+.schedule h2,.schedule p,.schedule strong,.schedule td,.schedule th,.schedule small,.schedule span{color:#151617}
+.tab,.chip{white-space:nowrap}
+.classrow{
+  display:grid;
+  grid-template-columns:110px 1.5fr .9fr 90px 130px 160px 130px;
+  gap:14px;align-items:center;padding:18px 18px;border-radius:18px;margin-bottom:12px;
+  background:rgba(255,255,255,.56);box-shadow:0 14px 22px rgba(0,0,0,.06)!important;border:1px solid rgba(0,0,0,.08)!important
+}
+.classrow:last-child{border-bottom:none!important}
+.classrow button{min-height:46px}
+.spots{display:flex;gap:4px}
+.spots i{width:7px;height:20px;border-radius:999px;background:#c6b8a2}
+.spots i.full{background:#2a2b2e}
+
+/* Lift lab */
+.labgrid{gap:58px}
+.stepper button,.stepper input,#join input,#join select,#reserve input{
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12)!important;
+  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), #101214!important;
+  color:#fff!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+#join input,#join select,#reserve input{width:100%;min-height:52px;padding:0 14px}
+label{display:block;color:#f4eee5;font-weight:600}
+.rm{font-size:clamp(4.8rem,9.5vw,8.4rem);letter-spacing:-.06em;color:#fff}
+.train td,.train th{border-color:rgba(255,255,255,.08)!important}
+.train tbody tr:hover,.train tbody tr.sel{background:rgba(255,255,255,.06)!important}
+
+/* Coaches */
+.coachbody{padding-top:2px}
+.role{color:#d8cfc4;margin:8px 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips span,.status{
+  display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);color:#efe8dd
+}
+.bioextra{max-height:0;overflow:hidden;transition:max-height .25s ease, margin-top .25s ease}
+.bioextra.open{max-height:240px;margin-top:12px}
+
+/* Facility */
+.facility{background:transparent!important}
+.facilitygrid{gap:24px!important;align-items:start}
+.specs{list-style:none;padding:0;margin:0 0 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.specs li{padding:14px 15px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.panel{padding:18px}
+.floorplan{padding:20px;border-radius:22px;background:linear-gradient(180deg,#d8d0c2,#c7beae)!important;border:1px solid rgba(0,0,0,.12)!important}
+.floorplan svg{width:100%;height:auto;display:block}
+.floorplan text{font-family:var(--display);font-size:24px;font-weight:800;fill:#1b1d1f;letter-spacing:.03em}
+.hot{cursor:pointer}
+.hot rect{fill:rgba(30,32,34,.08);stroke:#2f3133;stroke-width:3;rx:18}
+.hot.active rect,.hot:hover rect,.hot:focus rect{fill:rgba(255,123,34,.16);stroke:#ff7a1a}
+#facPanel strong,#facPanel p{color:#efe6d9}
+.facilityphotos{display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px}
+
+/* Notes / FAQ / Join */
+.notes{background:transparent!important}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr)}
+.quote blockquote{font-family:var(--display);font-size:clamp(1.5rem,2vw,2.2rem);line-height:1.05;margin:0 0 18px;color:#fff}
+.faqitem{margin-bottom:14px;padding:0!important;overflow:hidden}
+.faqitem button{
+  width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 22px;
+  background:transparent!important;border:none!important;box-shadow:none!important;color:#fff!important
+}
+.faqans{max-height:0;overflow:hidden;padding:0 22px;color:#ded5c8;transition:max-height .24s ease,padding .24s ease}
+.faqans.open{max-height:240px;padding:0 22px 20px}
+.joingrid{gap:24px!important}
+#visit{align-self:start}
+.status{margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.hours .today td{color:#fff;font-weight:700}
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.formgrid .full{grid-column:1 / -1}
+.error{display:block;color:#ffb499;min-height:20px;font-size:.92rem;padding-top:6px}
+.success{margin-top:12px;padding:14px 16px;border-radius:14px;background:rgba(255,122,26,.12);border:1px solid rgba(255,122,26,.18);color:#ffe0ca}
+.footer{padding:30px 0 24px;border-top:none!important}
+.footgrid{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center}
+.footlinks{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.demo{margin-top:16px;color:#c9bfaf}
+
+/* Dialog */
+dialog{width:min(520px,calc(100% - 32px));padding:22px;border-radius:24px;color:#fff}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+.dlghead{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:18px}
+.dlgform{display:grid;gap:14px}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .programgrid,.labgrid,.sectionhead,.facilitygrid,.joingrid,.footgrid{grid-template-columns:1fr!important}
+  .plans,.quotes,.facilityphotos{grid-template-columns:1fr!important}
+  .program:first-child .photo{min-height:420px}
+  .classrow{grid-template-columns:1fr;gap:10px}
+  .specs{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 760px){
+  .links{display:none!important}.menu{display:inline-flex!important;align-items:center;justify-content:center}
+  .mobile{background:rgba(8,9,10,.98)!important;backdrop-filter:blur(12px)}
+  .hero{height:300vh}
+  .hero-copy{top:14%;width:min(90vw,520px)}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .skip{display:none}
+  .counter{font-size:4rem}
+  .formgrid,.specs{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .capgrid{grid-template-columns:1fr!important}
+}
+</style>
+
+</head>
+<body>
+<header class="nav" id="nav"><div class="wrap navin"><a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" fill="#3A3F44"/><circle cx="24" cy="24" r="7" fill="#0E0F10"/><rect x="20" y="2" width="8" height="8" fill="#0E0F10"/><rect x="20" y="38" width="8" height="8" fill="#0E0F10"/></svg><span><strong>FOUNDRY</strong><br><small>Athletic Club</small></span></a><nav class="links"><a href="#classes">Classes</a><a href="#membership">Membership</a><a href="#coaches">Coaches</a><a href="#facility">Facility</a><a href="#visit">Visit</a><a class="btn primary" href="#join">Free week</a></nav><button class="menu" id="menu" aria-label="Open menu">Menu</button></div></header>
+<div class="mobile" id="mobile" aria-hidden="true"><button class="menu close" id="close">Close</button><nav><a href="#classes">Classes</a><a href="#membership">Membership</a><a href="#coaches">Coaches</a><a href="#facility">Facility</a><a href="#visit">Visit</a><a href="#join">Free week</a></nav></div>
+<main>
+<section class="hero noise" id="top"><div class="stage" id="stage" data-level="0"><!-- HERO PHOTO SLOT: full-width foundry training floor, 16:9, layered behind scene --><figure class="photo hero-photo" data-photo="hero"><i></i></figure><a class="skip" href="#classes">Skip intro</a><div class="barGlow"></div><div class="hero-copy"><div class="counter" id="counter">45 LB</div><h1 id="heroH">Start with the bar.</h1><p id="heroP">45 pounds. Everyone here started exactly where you are.</p><div class="hero-actions" id="heroActions"><a class="btn primary" href="#join">Start your free week</a><a href="#classes">See the classes</a></div></div><div class="barwrap" id="barwrap"><svg id="barSvg" viewBox="0 0 1400 250" aria-hidden="true"><path id="barPath" d="M120 125 Q700 125 1280 125" fill="none" stroke="#8c8f91" stroke-width="12"/><g id="plates"></g></svg></div><div class="floor"></div><div class="hero-foot">14,000 sq ft · RiNo, Denver · Membership capped at 450</div><div class="sr" aria-live="polite" id="live">45 pounds</div></div></section>
+<section class="capacity" id="capacity"><div class="wrap capgrid"><div><div class="capbig num">412 of 450 memberships taken</div><p>38 open this month.</p></div><div><div class="meter" id="meter"><span></span></div><p>We cap membership so the racks are never crowded.</p></div><a href="#join">Hold my spot</a></div></section>
+<section class="section programs noise" id="classes"><div class="wrap"><div class="sectionhead"><h2>Train with intent.</h2><p>Serious programming, small groups, and enough room to work. Every coached class is capped at 12.</p></div><div class="programgrid">
+<article class="program"><!-- PROGRAM PHOTO: athlete back squatting in old iron foundry, 4:5 --><figure class="photo" data-photo="program-strength"><i></i></figure><h3>Strength</h3><p>Barbell fundamentals with wave-loaded progressions that build week to week. You learn the lifts, then earn the load.</p><ul><li>Squat, bench, deadlift, press</li><li>Max 12 athletes</li><li>Progress tracked in 4-week waves</li></ul></article>
+<article class="program"><!-- PROGRAM PHOTO: sled push on turf lane, 4:3 --><figure class="photo" data-photo="program-conditioning"><i></i></figure><h3>Conditioning</h3><p>Sleds, rowers, and intervals built around heart-rate zones, not random punishment.</p><ul><li>40-yard sled lane</li><li>10 Concept-style rowers</li><li>45-minute sessions</li></ul></article>
+<article class="program"><!-- PROGRAM PHOTO: mobility recovery room sauna/cold plunge, 4:3 --><figure class="photo" data-photo="program-recovery"><i></i></figure><h3>Mobility + Recovery</h3><p>Guided mobility keeps the training moving. Finish in the sauna or cold plunge room.</p><ul><li>Shoulder + hip focus</li><li>Guided 45-minute classes</li><li>Sauna + cold plunge</li></ul></article>
+</div></div></section>
+<section class="section schedule" aria-labelledby="scheduleH"><div class="wrap"><h2 id="scheduleH">This week on the floor.</h2><div class="tabs" role="tablist" id="dayTabs"></div><div class="filters" id="filters"></div><div id="scheduleRows"></div></div></section>
+<section class="section lab noise" id="lab"><div class="wrap labgrid"><div><h2>The Lift Lab.</h2><p style="color:#aaa;margin-top:18px">Estimate your one-rep max, then see exactly what goes on the bar.</p><div class="seg" id="lifts"></div><div class="field"><label for="weight">Working weight (lb)</label><div class="stepper"><button id="minus" aria-label="Decrease weight">−</button><input id="weight" class="num" type="number" min="45" max="1000" step="5" value="185"><button id="plus" aria-label="Increase weight">+</button></div><small>45–1000 lb, in 5 lb steps.</small></div><div class="field"><label for="reps">Reps: <span id="repOut">5</span></label><input id="reps" type="range" min="1" max="12" value="5"></div></div><div><div>Estimated one-rep max</div><div class="rm num" id="rm">215 LB</div><table class="train"><thead><tr><th>%</th><th>Target</th><th>Typical reps</th></tr></thead><tbody id="trainBody"></tbody></table><div class="loadout"><strong id="loadText">Per side:</strong><svg id="miniBar" viewBox="0 0 600 110" aria-hidden="true"></svg></div></div></div></section>
+<section class="section membership noise" id="membership"><div class="wrap"><div class="sectionhead"><h2>Membership without the crowd.</h2><p>Every plan starts with a free first week. No long-term contract. $99 enrollment fee is waived with annual billing.</p></div><div class="billing"><button class="active" data-bill="monthly">Monthly</button><button data-bill="annual">Annual · save ~15%</button></div><div class="plans">
+<article class="plan platebox" data-plan="Open Gym" data-m="89" data-a="76"><h3>Open Gym</h3><div class="price num">$89<small>/mo</small></div><ul><li>Unlimited open gym during staffed hours</li><li>Locker included</li><li>1 guest pass each month</li></ul><button class="btn planbtn">Start free week</button></article>
+<article class="plan platebox feature" data-plan="Coached" data-m="189" data-a="161"><strong>Most chosen</strong><h3>Coached</h3><div class="price num">$189<small>/mo</small></div><ul><li>Everything in Open Gym</li><li>Unlimited small-group classes</li><li>Quarterly strength assessment</li><li>Programming app</li></ul><button class="btn primary planbtn">Start free week</button></article>
+<article class="plan platebox" data-plan="Private" data-m="449" data-a="382"><h3>Private</h3><div class="price num">$449<small>/mo</small></div><ul><li>Everything in Coached</li><li>4 one-on-one sessions per month</li><li>Nutrition review + priority booking</li><li>Towel service + recovery room</li></ul><button class="btn planbtn">Start free week</button></article>
+</div></div></section>
+<section class="section coaches noise" id="coaches"><div class="wrap"><div class="sectionhead"><h2>Coaches who coach.</h2><p>No clipboard spectators. Every session has a coach on the floor watching positions, load, and pace.</p></div><div class="coachgrid" id="coachgrid"></div></div></section>
+<section class="section facility" id="facility"><div class="wrap"><div class="sectionhead"><h2>14,000 square feet. Used well.</h2><p>Built inside a converted RiNo iron foundry with the original steel trusses still overhead.</p></div><div class="facilitygrid"><div><ul class="specs"><li>12 power racks</li><li>6 lifting platforms</li><li>40-yard sled lane</li><li>10 rowers</li><li>Plates up to 100 lb</li><li>Sauna</li><li>Cold plunge</li><li>24 lockers</li><li>Free rear parking</li></ul><div class="panel" id="facPanel"><strong>Power racks · 12</strong><p>Full-height racks with dedicated platforms and no waiting at normal peak hours.</p></div></div><div class="floorplan"><svg viewBox="0 0 700 430" role="group" aria-label="Interactive facility floor plan"><rect x="8" y="8" width="684" height="414" fill="#77756f" stroke="#202122" stroke-width="4"/><g class="hot active" tabindex="0" data-name="Power racks" data-count="12" data-desc="Full-height racks with dedicated platforms and no waiting at normal peak hours."><rect x="40" y="45" width="250" height="135"/><text x="60" y="75">RACKS</text></g><g class="hot" tabindex="0" data-name="Platforms" data-count="6" data-desc="Six dedicated Olympic lifting platforms with bumper sets close at hand."><rect x="320" y="45" width="170" height="135"/><text x="340" y="75">PLATFORMS</text></g><g class="hot" tabindex="0" data-name="Rowers" data-count="10" data-desc="Ten rowers line the north wall for conditioning classes and warm-ups."><rect x="520" y="45" width="135" height="135"/><text x="540" y="75">ROWERS</text></g><g class="hot" tabindex="0" data-name="Sled lane" data-count="40 yards" data-desc="A straight 40-yard turf lane for sled work, carries, and acceleration drills."><rect x="40" y="215" width="430" height="75"/><text x="60" y="258">40-YARD SLED LANE</text></g><g class="hot" tabindex="0" data-name="Recovery room" data-count="2 zones" data-desc="A quiet recovery room with one sauna and one cold plunge."><rect x="500" y="215" width="155" height="75"/><text x="515" y="245">RECOVERY</text></g><g class="hot" tabindex="0" data-name="Locker rooms" data-count="24 lockers" data-desc="24 secure day lockers with showers and towel drop."><rect x="500" y="320" width="155" height="70"/><text x="515" y="350">LOCKERS</text></g></svg></div></div><div class="facilityphotos"><!-- FACILITY PHOTO: rack hall, 3:2 --><figure class="photo" data-photo="facility-racks"><i></i></figure><!-- FACILITY PHOTO: sled turf lane, 4:3 --><figure class="photo" data-photo="facility-sled"><i></i></figure><!-- FACILITY PHOTO: recovery room, 4:3 --><figure class="photo" data-photo="facility-recovery"><i></i></figure></div></div></section>
+<section class="section notes"><div class="wrap"><h2>What changed.</h2><div class="quotes"><article class="quote"><blockquote>“I added 90 pounds to my deadlift in a year.”</blockquote><p>Elena · member for 14 months</p></article><article class="quote"><blockquote>“I stopped guessing what to do every Monday.”</blockquote><p>Chris · member for 8 months</p></article><article class="quote"><blockquote>“At 46, I finally hit a bodyweight bench without my shoulders hurting.”</blockquote><p>David · member for 19 months</p></article></div></div></section>
+<section class="section faq noise"><div class="wrap"><div class="sectionhead"><h2>Before your first week.</h2><p>Five things most new members ask us before they walk in.</p></div><div id="faq"></div></div></section>
+<section class="section join" id="join"><div class="wrap joingrid"><div><h2>Start your free week.</h2><p style="margin-top:18px">Tell us when you like to train. We’ll set up your first coached session and give you full gym access for seven days.</p><form id="joinForm" novalidate><div class="formgrid"><label>Name<input name="name" autocomplete="name"><span class="error"></span></label><label>Email<input name="email" type="email" autocomplete="email"><span class="error"></span></label><label>Phone<input name="phone" type="tel" autocomplete="tel"><span class="error"></span></label><label>Plan<select name="plan" id="planSelect"><option>Open Gym</option><option selected>Coached</option><option>Private</option></select></label><label>Goal<select name="goal"><option>Get stronger</option><option>Lose fat</option><option>Return from injury</option><option>Learn the lifts</option><option>Not sure</option></select></label><label>Preferred time<select name="time"><option>Early morning</option><option>Midday</option><option>Evening</option></select></label><div class="full"><button class="btn primary" type="submit">Start my free week</button><div id="joinSuccess"></div></div></div></form></div><aside id="visit"><span class="status" id="openStatus">Checking hours…</span><table class="hours" id="hours"></table><h3>3150 Walnut Street<br>Denver, CO 80205</h3><p style="margin-top:15px"><a href="tel:+13035550148">(303) 555-0148</a><br><a href="mailto:join@foundryclub.example">join@foundryclub.example</a></p><p style="margin-top:15px">Free parking behind the building.</p></aside></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footgrid"><a class="brand" href="#top"><strong>FOUNDRY</strong> <small>Athletic Club</small></a><div class="footlinks"><a href="#classes">Classes</a><a href="#membership">Membership</a><a href="#coaches">Coaches</a><a href="#facility">Facility</a><a href="#visit">Visit</a></div><div>3150 Walnut Street, Denver</div></div><div class="demo">Concept website designed by Shiftable. Foundry Athletic Club and all details are fictional.</div></div></footer>
+<dialog id="reserve"><div class="dlghead"><div><h3>Reserve your spot</h3><p id="classSummary"></p></div><button id="dlgClose" aria-label="Close">×</button></div><form class="dlgform" id="reserveForm" novalidate><label>Name<input name="name"><span class="error"></span></label><label>Email<input name="email" type="email"><span class="error"></span></label><button class="btn primary" type="submit">Confirm reservation</button><div id="reserveSuccess"></div></form></dialog>
+<script>
+const $=(s,p=document)=>p.querySelector(s),$$=(s,p=document)=>[...p.querySelectorAll(s)];
+// Navigation + mobile focus trap
+const nav=$('#nav'),mobile=$('#mobile'),menu=$('#menu'),closeBtn=$('#close');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+function openMenu(){mobile.classList.add('open');mobile.setAttribute('aria-hidden','false');closeBtn.focus()}function closeMenu(){mobile.classList.remove('open');mobile.setAttribute('aria-hidden','true');menu.focus()}menu.onclick=openMenu;closeBtn.onclick=closeMenu;$$('#mobile a').forEach(a=>a.onclick=closeMenu);mobile.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(e.key==='Tab'){let f=$$('a,button',mobile),i=f.indexOf(document.activeElement);if(e.shiftKey&&i===0){e.preventDefault();f.at(-1).focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}});
+// Hero scroll scene
+const hero=$('.hero'),stage=$('#stage'),counter=$('#counter'),hh=$('#heroH'),hp=$('#heroP'),actions=$('#heroActions'),barwrap=$('#barwrap'),plates=$('#plates'),barPath=$('#barPath'),live=$('#live');
+const states=[{w:45,h:'Start with the bar.',p:'45 pounds. Everyone here started exactly where you are.'},{w:135,h:'Then add weight.',p:'Good coaching makes heavy feel simple.'},{w:225,h:'Two plates a side.',p:'A milestone, not a finish line.'},{w:315,h:'Three.',p:'Your coach is right behind you.'},{w:405,h:'Strong is built here.',p:'Four plates a side. Built one clean rep at a time.'}];
+function buildPlates(){let out='';for(let i=0;i<4;i++){let lx=430-i*30,rx=970+i*30;for(const [side,x] of [['left',lx],['right',rx]])out+=`<g class="plate ${side}" data-i="${i}"><rect x="${x-13}" y="38" width="26" height="174" rx="4" fill="#17191b" stroke="#777" stroke-width="2"/><text x="${x}" y="130" fill="#EDEDE8" text-anchor="middle" font-size="12" transform="rotate(-90 ${x} 130)">45 LB</text></g>`}plates.innerHTML=out}buildPlates();let level=-1,lastW=45,raf=0;
+function tweenWeight(to){let from=lastW,t0=performance.now();function f(t){let q=Math.min(1,(t-t0)/400);counter.textContent=Math.round(from+(to-from)*q)+' LB';if(q<1)requestAnimationFrame(f);else lastW=to}requestAnimationFrame(f)}
+function setLevel(n){if(n===level)return;let old=level;level=n;stage.dataset.level=n;tweenWeight(states[n].w);hh.style.opacity=0;hp.style.opacity=0;setTimeout(()=>{hh.textContent=states[n].h;hp.textContent=states[n].p;hh.style.opacity=hp.style.opacity=1},90);$$('.plate').forEach(p=>p.classList.toggle('on',+p.dataset.i<n));barPath.setAttribute('d',`M120 125 Q700 ${125+n*5} 1280 125`);actions.classList.toggle('show',n===4);barwrap.classList.toggle('lock',n===4);live.textContent=states[n].w+' pounds';if(n>old&&old>=0){stage.classList.remove('shake');void stage.offsetWidth;stage.classList.add('shake')}}
+function heroTick(){raf=0;if(matchMedia('(prefers-reduced-motion: reduce)').matches){setLevel(4);return}let r=hero.getBoundingClientRect(),max=hero.offsetHeight-innerHeight,p=Math.max(0,Math.min(1,-r.top/max)),n=Math.min(4,Math.floor(p*5));setLevel(n)}addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(heroTick)},{passive:true});heroTick();
+// capacity
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$('#meter').classList.add('go')}),{threshold:.5}).observe($('#capacity'));
+// schedule
+const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],coaches={Strength:'Marcus',Conditioning:'Jonah',Mobility:'Priya','Olympic lifting':'Tessa'};function base(day){if(day<5){let a=[['6:00 am','Strength',60,'All levels'],['7:15 am','Conditioning',45,'All levels'],['12:00 pm','Strength Express',45,'All levels'],['5:30 pm','Strength',60,'All levels'],['6:45 pm','Conditioning',45,'All levels']];if([0,2,4].includes(day))a.splice(2,0,['9:30 am','Mobility',45,'All levels']);if([1,3].includes(day))a.push(['6:00 pm','Olympic lifting',75,'Intermediate']);return a}return day===5?[['8:00 am','Strength',60,'All levels'],['9:15 am','Conditioning',45,'All levels'],['10:30 am','Mobility',45,'All levels']]:[['9:00 am','Mobility',45,'All levels'],['10:00 am','Conditioning',45,'All levels']]}
+function typeOf(n){return n.startsWith('Strength')?'Strength':n}function hashSpots(d,t){let s=d+t;return [...s].reduce((a,c)=>((a*31+c.charCodeAt(0))>>>0),7)%13}function denverParts(){let ps=new Intl.DateTimeFormat('en-US',{timeZone:'America/Denver',weekday:'short',hour:'numeric',minute:'2-digit',hour12:false}).formatToParts(new Date());let o={};ps.forEach(p=>o[p.type]=p.value);return o}let dp=denverParts(),today=Math.max(0,days.indexOf(dp.weekday)),activeDay=today,filter='All',spotState={};
+const tabs=$('#dayTabs');days.forEach((d,i)=>tabs.insertAdjacentHTML('beforeend',`<button class="tab" role="tab" data-day="${i}" aria-selected="${i===today}">${d}</button>`));['All','Strength','Conditioning','Olympic lifting','Mobility'].forEach(f=>$('#filters').insertAdjacentHTML('beforeend',`<button class="chip ${f==='All'?'active':''}" data-filter="${f}">${f}</button>`));
+function mins(t){let [hm,ap]=t.split(' '),[h,m]=hm.split(':').map(Number);if(ap==='pm'&&h!==12)h+=12;if(ap==='am'&&h===12)h=0;return h*60+m}function renderSchedule(){let rows=base(activeDay).filter(x=>filter==='All'||typeOf(x[1])===filter),now=(+dp.hour%24)*60+(+dp.minute),html='';rows.forEach(x=>{let key=activeDay+x[0]+x[1],spots=key in spotState?spotState[key]:hashSpots(days[activeDay],x[0]),past=activeDay===today&&mins(x[0])<now,typ=typeOf(x[1]),btn=past?'Started':spots===0?'Join waitlist':'Reserve';html+=`<div class="classrow" data-key="${key}"><strong class="num">${x[0]}</strong><div><strong>${x[1]}</strong><br><small>${x[2]} min · ${x[3]}</small></div><span>Coach ${coaches[typ]}</span><span>${x[2]} min</span><span>${x[3]}</span><div><div class="spots" aria-label="${spots} of 12 spots remaining">${Array.from({length:12},(_,i)=>`<i class="${i<spots?'full':''}"></i>`).join('')}</div><small>${spots} spots</small></div><button ${past?'disabled':''} data-reserve data-time="${x[0]}" data-name="${x[1]}" data-coach="${coaches[typ]}" data-key="${key}">${btn}</button></div>`});$('#scheduleRows').innerHTML=html||'<p>No classes match this filter.</p>';$$('[data-reserve]').forEach(b=>b.onclick=()=>openReserve(b))}renderSchedule();$$('.tab').forEach(b=>b.onclick=()=>{activeDay=+b.dataset.day;$$('.tab').forEach(x=>x.setAttribute('aria-selected',x===b));renderSchedule()});$$('.chip').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;$$('.chip').forEach(x=>x.classList.toggle('active',x===b));renderSchedule()});
+// reserve dialog
+const dlg=$('#reserve'),rform=$('#reserveForm');let reserving=null;function openReserve(b){reserving=b;$('#classSummary').textContent=`${days[activeDay]} · ${b.dataset.time} · ${b.dataset.name} · Coach ${b.dataset.coach}`;$('#reserveSuccess').textContent='';rform.reset();dlg.showModal()}$('#dlgClose').onclick=()=>dlg.close();rform.onsubmit=e=>{e.preventDefault();let ok=true;['name','email'].forEach(n=>{let f=rform.elements[n],er=f.nextElementSibling,valid=f.value.trim()&&(n!=='email'||/^[^@]+@[^@]+\.[^@]+$/.test(f.value));er.textContent=valid?'':`Enter a valid ${n}.`;ok&=!!valid});if(!ok)return;let k=reserving.dataset.key,s=k in spotState?spotState[k]:hashSpots(days[activeDay],reserving.dataset.time);if(s>0)spotState[k]=s-1;$('#reserveSuccess').className='success';$('#reserveSuccess').textContent=`You're in. See you at ${reserving.dataset.time} with Coach ${reserving.dataset.coach}.`;renderSchedule()};
+// lift lab
+['Squat','Bench','Deadlift','Overhead press'].forEach((x,i)=>$('#lifts').insertAdjacentHTML('beforeend',`<button class="${i?'':'active'}">${x}</button>`));$$('#lifts button').forEach(b=>b.onclick=()=>{$$('#lifts button').forEach(x=>x.classList.toggle('active',x===b))});const weight=$('#weight'),reps=$('#reps');$('#minus').onclick=()=>{weight.value=Math.max(45,(+weight.value||45)-5);calc()};$('#plus').onclick=()=>{weight.value=Math.min(1000,(+weight.value||45)+5);calc()};weight.oninput=calc;weight.onblur=()=>{weight.value=Math.max(45,Math.min(1000,Math.round((+weight.value||45)/5)*5));calc()};reps.oninput=calc;const percs=[[95,2],[90,4],[85,6],[80,8],[75,10],[70,12]];function round5(x){return Math.round(x/5)*5}function loadout(target){if(target<45)return {txt:'Under bar weight.',ps:[]};let side=(target-45)/2,avail=[45,35,25,10,5,2.5],ps=[];for(let p of avail)while(side+1e-6>=p){ps.push(p);side-=p}return {txt:ps.length?'Per side: '+ps.join(', '):'Empty bar.',ps}}
+function drawMini(ps){let svg='<line x1="40" y1="55" x2="560" y2="55" stroke="#888" stroke-width="8"/>';let x=240;ps.forEach(p=>{let h=30+p*.75;svg+=`<rect x="${x}" y="${55-h/2}" width="10" height="${h}" fill="#333" stroke="#aaa"/>`;x-=12});x=350;ps.forEach(p=>{let h=30+p*.75;svg+=`<rect x="${x}" y="${55-h/2}" width="10" height="${h}" fill="#333" stroke="#aaa"/>`;x+=12});$('#miniBar').innerHTML=svg}function selectLoad(t,tr){$$('#trainBody tr').forEach(x=>x.classList.toggle('sel',x===tr));let l=loadout(t);$('#loadText').textContent=l.txt;drawMini(l.ps)}function calc(){let w=Math.max(45,Math.min(1000,+weight.value||45)),r=+reps.value,one=round5(r===1?w:w*(1+r/30));$('#repOut').textContent=r;$('#rm').textContent=one+' LB';let body=$('#trainBody');body.innerHTML='';percs.forEach(([p,rr],i)=>{let t=round5(one*p/100);body.insertAdjacentHTML('beforeend',`<tr data-target="${t}"><td>${p}%</td><td class="num">${t} lb</td><td>${rr}</td></tr>`)});$$('tr',body).forEach(tr=>tr.onclick=()=>selectLoad(+tr.dataset.target,tr));let first=$('tr',body);selectLoad(+first.dataset.target,first)}calc();
+// billing + plan selection
+$$('.billing button').forEach(b=>b.onclick=()=>{$$('.billing button').forEach(x=>x.classList.toggle('active',x===b));let annual=b.dataset.bill==='annual';$$('.plan').forEach(p=>{$('.price',p).innerHTML=`$${annual?p.dataset.a:p.dataset.m}<small>/mo</small>`})});$$('.planbtn').forEach(b=>b.onclick=()=>{let p=b.closest('.plan');$('#planSelect').value=p.dataset.plan;$('#join').scrollIntoView({behavior:'smooth'})});
+// coaches
+const coachData=[['Marcus Reyes','Head of Strength','12 years coaching · former collegiate thrower',['squat','deadlift','programming'],'Marcus built Foundry’s strength system around repeatable technique and patient loading. He still coaches the first 6:00 am block most weekdays.'],['Tessa Lindqvist','Olympic Lifting','9 years coaching',['snatch','clean + jerk','technique'],'Tessa breaks fast lifts into positions athletes can actually feel, then rebuilds speed without rushing the load.'],['Jonah Park','Conditioning + Performance','8 years coaching',['intervals','sled work','athletic development'],'Jonah programs conditioning around output and recovery so hard work has a purpose beyond being tired.'],['Priya Raman','Mobility + Recovery','10 years · physical therapy background',['shoulders','hips','return-to-lift'],'Priya bridges the space between rehab and training, with progressions that restore confidence under load.']];coachData.forEach((c,i)=>$('#coachgrid').insertAdjacentHTML('beforeend',`<article class="coach"><!-- COACH PHOTO: ${c[0]}, environmental portrait in foundry gym, ${i?'4:3':'4:5'} --><figure class="photo" data-photo="coach-${c[0].split(' ')[0].toLowerCase()}"><i></i></figure><div class="coachbody"><h3>${c[0]}</h3><div class="role">${c[1]} · ${c[2]}</div><div class="chips">${c[3].map(x=>`<span>${x}</span>`).join('')}</div><button class="more" aria-expanded="false">Read more</button><p class="bioextra">${c[4]}</p></div></article>`));$$('.more').forEach(b=>b.onclick=()=>{let p=b.nextElementSibling,on=!p.classList.contains('open');p.classList.toggle('open',on);b.setAttribute('aria-expanded',on);b.textContent=on?'Show less':'Read more'});
+// facility hotspots
+$$('.hot').forEach(h=>{function act(){ $$('.hot').forEach(x=>x.classList.toggle('active',x===h));$('#facPanel').innerHTML=`<strong>${h.dataset.name} · ${h.dataset.count}</strong><p>${h.dataset.desc}</p>`}h.onmouseenter=act;h.onfocus=act;h.onclick=act});
+// FAQ
+const faqs=[['Do I need experience?','No. About a third of new members start without barbell experience. Your free week begins with a movement and training-history check, then we scale the first sessions to you.'],['What does the free week include?','Seven consecutive days of open-gym access plus up to three coached small-group classes. There is no charge and no card required to start.'],['Can I freeze my membership?','Yes. Members can freeze for 2 to 8 weeks at a time for travel, injury, or life changes. Give us three days notice before your next billing date.'],['Is there a contract?','No long-term contract. Monthly plans renew month to month. Annual pricing is billed monthly with a 12-month rate commitment.'],['What should I bring?','Training clothes, clean shoes, and a water bottle. We provide chalk, collars, bands, towels for Private members, and all lifting equipment.']];faqs.forEach((f,i)=>$('#faq').insertAdjacentHTML('beforeend',`<div class="faqitem"><button aria-expanded="${i===0}"><span>${f[0]}</span><span>+</span></button><div class="faqans ${i===0?'open':''}">${f[1]}</div></div>`));$$('.faqitem button').forEach(b=>b.onclick=()=>{let a=b.nextElementSibling,on=!a.classList.contains('open');$$('.faqans').forEach(x=>x.classList.remove('open'));$$('.faqitem button').forEach(x=>x.setAttribute('aria-expanded','false'));if(on){a.classList.add('open');b.setAttribute('aria-expanded','true')}});
+// Denver hours/status
+const hourRows=[['Mon','5 am – 9 pm',5,21],['Tue','5 am – 9 pm',5,21],['Wed','5 am – 9 pm',5,21],['Thu','5 am – 9 pm',5,21],['Fri','5 am – 9 pm',5,21],['Sat','7 am – 6 pm',7,18],['Sun','8 am – 4 pm',8,16]];let idx=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(dp.weekday),monIdx=(idx+6)%7;hourRows.forEach((r,i)=>$('#hours').insertAdjacentHTML('beforeend',`<tr class="${i===monIdx?'today':''}"><td>${r[0]}</td><td>${r[1]}</td></tr>`));let hr=(+dp.hour%24)+(+dp.minute/60),cur=hourRows[monIdx],open=hr>=cur[2]&&hr<cur[3];$('#openStatus').textContent=open?'Open now':'Closed';
+// join form
+$('#joinForm').onsubmit=e=>{e.preventDefault();let form=e.currentTarget,ok=true;['name','email','phone'].forEach(n=>{let f=form.elements[n],er=f.nextElementSibling,v=f.value.trim(),valid=v&&(n!=='email'||/^[^@]+@[^@]+\.[^@]+$/.test(v))&&(n!=='phone'||v.replace(/\D/g,'').length>=10);er.textContent=valid?'':`Enter a valid ${n}.`;ok&=!!valid});if(ok)$('#joinSuccess').innerHTML='<div class="success">You’re on the list. Marcus will text you within one business day.</div>'};
+</script>
+</body></html>
